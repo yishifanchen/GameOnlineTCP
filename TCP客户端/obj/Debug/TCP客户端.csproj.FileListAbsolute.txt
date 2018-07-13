@@ -10,3 +10,10 @@ E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\obj\Debug\TCP客户端.pdb
 E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\bin\Debug\TCP客户端.exe
 E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\bin\Debug\TCP客户端.pdb
 E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\obj\Debug\TCP客户端.csprojResolveAssemblyReference.cache
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP客户端\bin\Debug\TCP客户端.exe.config
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP客户端\bin\Debug\TCP客户端.exe
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP客户端\bin\Debug\TCP客户端.pdb
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.csprojResolveAssemblyReference.cache
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.csproj.CoreCompileInputs.cache
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.exe
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.pdb

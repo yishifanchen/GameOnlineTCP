@@ -23,3 +23,10 @@ D:\XiBinBin\VSProjects\TCPGameOnline\TCP服务器端\obj\Debug\TCP服务器端.c
 D:\XiBinBin\VSProjects\TCPGameOnline\TCP服务器端\obj\Debug\TCP服务器端.csproj.CoreCompileInputs.cache
 D:\XiBinBin\VSProjects\TCPGameOnline\TCP服务器端\obj\Debug\TCP服务器端.exe
 D:\XiBinBin\VSProjects\TCPGameOnline\TCP服务器端\obj\Debug\TCP服务器端.pdb
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP服务器端\bin\Debug\TCP服务器端.exe.config
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP服务器端\bin\Debug\TCP服务器端.exe
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP服务器端\bin\Debug\TCP服务器端.pdb
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP服务器端\obj\Debug\TCP服务器端.csprojResolveAssemblyReference.cache
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP服务器端\obj\Debug\TCP服务器端.csproj.CoreCompileInputs.cache
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP服务器端\obj\Debug\TCP服务器端.exe
+D:\XiBinBin\VSProjects\GameOnlineTCP\TCP服务器端\obj\Debug\TCP服务器端.pdb
