@@ -1,0 +1,12 @@
+E:\axiangmu\VSProject\TCP socket开发网络游戏\TCP socket开发网络游戏\TCP客户端\bin\Debug\TCP客户端.exe.config
+E:\axiangmu\VSProject\TCP socket开发网络游戏\TCP socket开发网络游戏\TCP客户端\bin\Debug\TCP客户端.exe
+E:\axiangmu\VSProject\TCP socket开发网络游戏\TCP socket开发网络游戏\TCP客户端\bin\Debug\TCP客户端.pdb
+E:\axiangmu\VSProject\TCP socket开发网络游戏\TCP socket开发网络游戏\TCP客户端\obj\Debug\TCP客户端.exe
+E:\axiangmu\VSProject\TCP socket开发网络游戏\TCP socket开发网络游戏\TCP客户端\obj\Debug\TCP客户端.pdb
+E:\axiangmu\VSProject\TCP socket开发网络游戏\TCP socket开发网络游戏\TCP客户端\obj\Debug\TCP客户端.csprojResolveAssemblyReference.cache
+E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\bin\Debug\TCP客户端.exe.config
+E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\obj\Debug\TCP客户端.exe
+E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\obj\Debug\TCP客户端.pdb
+E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\bin\Debug\TCP客户端.exe
+E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\bin\Debug\TCP客户端.pdb
+E:\axiangmu\VSProject\TCPGameOnline\TCP客户端\obj\Debug\TCP客户端.csprojResolveAssemblyReference.cache

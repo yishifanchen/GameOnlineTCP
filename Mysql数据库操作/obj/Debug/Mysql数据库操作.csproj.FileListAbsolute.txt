@@ -1,0 +1,8 @@
+D:\XiBinBin\VSProjects\TCPGameOnline\Mysql数据库操作\bin\Debug\Mysql数据库操作.exe.config
+D:\XiBinBin\VSProjects\TCPGameOnline\Mysql数据库操作\bin\Debug\Mysql数据库操作.exe
+D:\XiBinBin\VSProjects\TCPGameOnline\Mysql数据库操作\bin\Debug\Mysql数据库操作.pdb
+D:\XiBinBin\VSProjects\TCPGameOnline\Mysql数据库操作\bin\Debug\MySql.Data.dll
+D:\XiBinBin\VSProjects\TCPGameOnline\Mysql数据库操作\obj\Debug\Mysql数据库操作.csprojResolveAssemblyReference.cache
+D:\XiBinBin\VSProjects\TCPGameOnline\Mysql数据库操作\obj\Debug\Mysql数据库操作.csproj.CoreCompileInputs.cache
+D:\XiBinBin\VSProjects\TCPGameOnline\Mysql数据库操作\obj\Debug\Mysql数据库操作.exe
+D:\XiBinBin\VSProjects\TCPGameOnline\Mysql数据库操作\obj\Debug\Mysql数据库操作.pdb
