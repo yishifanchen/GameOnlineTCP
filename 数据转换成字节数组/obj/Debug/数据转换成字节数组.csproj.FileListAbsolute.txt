@@ -10,3 +10,9 @@ D:\XiBinBin\VSProjects\GameOnlineTCP\数据转换成字节数组\obj\Debug\数�
 D:\XiBinBin\VSProjects\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.csproj.CoreCompileInputs.cache
 D:\XiBinBin\VSProjects\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.exe
 D:\XiBinBin\VSProjects\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.pdb
+F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\bin\Debug\数据转换成字节数组.exe.config
+F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\bin\Debug\数据转换成字节数组.exe
+F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\bin\Debug\数据转换成字节数组.pdb
+F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.csprojResolveAssemblyReference.cache
+F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.exe
+F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.pdb
