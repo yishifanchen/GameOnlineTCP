@@ -5,18 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Common;
 using System.Reflection;
+using GameServer.Servers;
 
 namespace GameServer.Controller
 {
     class ControllerManager
     {
         private Dictionary<RequestCode, BaseController> controllerDict = new Dictionary<RequestCode, BaseController>();
-
-        public ControllerManager()
+        private Server server;
+        public ControllerManager(Server server)
         {
-            Init();
+            this.server = server;
+            InitController();
         }
-        private void Init()
+        private void InitController()
         {
             DefaultController defaultController = new DefaultController();
             controllerDict.Add(defaultController.RequestCode, defaultController);
@@ -26,7 +28,7 @@ namespace GameServer.Controller
         /// </summary>
         /// <param name="requestCode"></param>
         /// <param name="actionCode"></param>
-        public void HandleRequest(RequestCode requestCode,ActionCode actionCode,string data)
+        public void HandleRequest(RequestCode requestCode,ActionCode actionCode,string data,Client client)
         {
             BaseController controller;
             bool isGet = controllerDict.TryGetValue(requestCode, out controller);
@@ -40,8 +42,13 @@ namespace GameServer.Controller
             {
                 Console.WriteLine("【警告】在controller["+controller.GetType()+"]中没有对应的处理方法：【"+methodName+"】");return;
             }
-            object[] parameters = new object[] { data };
-            mi.Invoke(controller, parameters);
+            object[] parameters = new object[] { data,client };
+            object o = mi.Invoke(controller, parameters);
+            if(o==null||string.IsNullOrEmpty(o as string))
+            {
+                return;
+            }
+            server.SendResponse(client,requestCode,o as string);
         }
     }
 }

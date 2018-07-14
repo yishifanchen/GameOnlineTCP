@@ -22,3 +22,11 @@ F:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\bin\Debug\Mysql数据�
 F:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\bin\Debug\MySql.Data.dll
 F:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\bin\Debug\Google.Protobuf.dll
 F:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\obj\Debug\Mysql数据库操作.csprojResolveAssemblyReference.cache
+E:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\bin\Debug\Mysql数据库操作.exe.config
+E:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\bin\Debug\Mysql数据库操作.exe
+E:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\bin\Debug\Mysql数据库操作.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\bin\Debug\MySql.Data.dll
+E:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\bin\Debug\Google.Protobuf.dll
+E:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\obj\Debug\Mysql数据库操作.csprojResolveAssemblyReference.cache
+E:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\obj\Debug\Mysql数据库操作.exe
+E:\axiangmu\VSProject\GameOnlineTCP\Mysql数据库操作\obj\Debug\Mysql数据库操作.pdb

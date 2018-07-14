@@ -16,3 +16,9 @@ F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\bin\Debug\数据
 F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.csprojResolveAssemblyReference.cache
 F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.exe
 F:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\bin\Debug\数据转换成字节数组.exe.config
+E:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\bin\Debug\数据转换成字节数组.exe
+E:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\bin\Debug\数据转换成字节数组.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.csprojResolveAssemblyReference.cache
+E:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.exe
+E:\axiangmu\VSProject\GameOnlineTCP\数据转换成字节数组\obj\Debug\数据转换成字节数组.pdb

@@ -23,3 +23,9 @@ F:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\bin\Debug\TCP客户端.pdb
 F:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.csprojResolveAssemblyReference.cache
 F:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.exe
 F:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\bin\Debug\TCP客户端.exe.config
+E:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\bin\Debug\TCP客户端.exe
+E:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\bin\Debug\TCP客户端.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.csprojResolveAssemblyReference.cache
+E:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.exe
+E:\axiangmu\VSProject\GameOnlineTCP\TCP客户端\obj\Debug\TCP客户端.pdb

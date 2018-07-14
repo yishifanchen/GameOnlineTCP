@@ -9,3 +9,14 @@ F:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\obj\Debug\游戏服务器
 F:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\obj\Debug\游戏服务器端.pdb
 F:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\Common.dll
 F:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\Common.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\游戏服务器端.exe.config
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\obj\Debug\游戏服务器端.exe
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\obj\Debug\游戏服务器端.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\游戏服务器端.exe
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\游戏服务器端.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\Common.dll
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\MySql.Data.dll
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\Google.Protobuf.dll
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\Common.pdb
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\bin\Debug\MySql.Data.xml
+E:\axiangmu\VSProject\GameOnlineTCP\游戏服务器端\obj\Debug\游戏服务器端.csprojResolveAssemblyReference.cache
