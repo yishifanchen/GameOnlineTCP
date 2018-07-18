@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Common;
 using MySql.Data.MySqlClient;
+using GameServer.Tool;
 
 namespace GameServer.Servers
 {
@@ -21,6 +22,7 @@ namespace GameServer.Servers
         {
             this.clientSocket = clientSocket;
             this.server = server;
+            mysqlConn = ConnHelper.Connect();
         }
         public void Start()
         {
@@ -49,6 +51,7 @@ namespace GameServer.Servers
         }
         private void Close()
         {
+            ConnHelper.CloseConnection(mysqlConn);
             if (clientSocket!=null)
             {
                 clientSocket.Close();
