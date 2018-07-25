@@ -22,6 +22,7 @@ namespace GameServer.Controller
         {
             DefaultController defaultController = new DefaultController();
             controllerDict.Add(defaultController.RequestCode, defaultController);
+            controllerDict.Add(RequestCode.User, new UserController());
         }
         /// <summary>
         /// 处理请求

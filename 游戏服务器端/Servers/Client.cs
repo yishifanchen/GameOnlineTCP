@@ -36,7 +36,9 @@ namespace GameServer.Servers
                 {
                     Close();
                 }
+                //Console.WriteLine(count);
                 msg.ReadMessage(count,OnProcessMessage);
+                
                 Start();
             }
             catch(Exception e)
@@ -47,6 +49,7 @@ namespace GameServer.Servers
         }
         private void OnProcessMessage(RequestCode requestCode, ActionCode actionCode, string data)
         {
+            Console.WriteLine(data);
             server.HandleRequest(requestCode, actionCode, data,this);
         }
         private void Close()
