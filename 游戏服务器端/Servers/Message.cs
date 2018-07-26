@@ -39,12 +39,9 @@ namespace GameServer.Servers
                     //string s = Encoding.UTF8.GetString(data, 4, count);
                     //Console.WriteLine("解析出来一条数据:" + s);
                     RequestCode requestCode= (RequestCode)BitConverter.ToInt32(data, 4);
-                    Console.WriteLine(requestCode);
                     ActionCode actionCode = (ActionCode)BitConverter.ToInt32(data, 8);
-                    Console.WriteLine(actionCode);
                     string s = Encoding.UTF8.GetString(data, 12, count-8);
                     processDataCallback(requestCode, actionCode, s);
-                    Console.WriteLine(requestCode+"  "+ actionCode+"       "+s);
                     Array.Copy(data, count + 4, data, 0, startIndex - 4 - count);
                     startIndex -= (count + 4);
                 }
@@ -54,9 +51,9 @@ namespace GameServer.Servers
                 }
             }
         }
-        public static byte[] PackData(RequestCode requestData,string data)
+        public static byte[] PackData(ActionCode actionCode,string data)
         {
-            byte[] requestCodeBytes = BitConverter.GetBytes((int)requestData);
+            byte[] requestCodeBytes = BitConverter.GetBytes((int)actionCode);
             byte[] dataBytes = Encoding.UTF8.GetBytes(data);
             int dataAmount = requestCodeBytes.Length + dataBytes.Length;
             byte[] dataAmountBytes = BitConverter.GetBytes(dataAmount);

@@ -10,7 +10,6 @@ E:\axiangmu\VSProject\GameOnlineTCP\Common\obj\Debug\Common.dll
 E:\axiangmu\VSProject\GameOnlineTCP\Common\obj\Debug\Common.pdb
 D:\XiBinBin\VSProjects\GameOnlineTCP\Common\bin\Debug\Common.dll
 D:\XiBinBin\VSProjects\GameOnlineTCP\Common\bin\Debug\Common.pdb
-D:\XiBinBin\VSProjects\GameOnlineTCP\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 D:\XiBinBin\VSProjects\GameOnlineTCP\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\XiBinBin\VSProjects\GameOnlineTCP\Common\obj\Debug\Common.dll
 D:\XiBinBin\VSProjects\GameOnlineTCP\Common\obj\Debug\Common.pdb

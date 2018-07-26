@@ -14,7 +14,7 @@ namespace GameServer.Servers
     {
         private IPEndPoint ipEndPoint;
         private Socket serverSocket;
-        private List<Client> clientList = new List<Client>();
+        public List<Client> clientList = new List<Client>();
         private ControllerManager controllerManager;
 
         public Server() { }
@@ -41,6 +41,7 @@ namespace GameServer.Servers
             client.Start();
             clientList.Add(client);
             Console.WriteLine("有客户端连接，当前客户端数量：{0}",clientList.Count);
+            serverSocket.BeginAccept(AcceptCallBack, null);
         }
         public void RemoveClient(Client client)
         {
@@ -49,9 +50,9 @@ namespace GameServer.Servers
                 clientList.Remove(client);
             }
         }
-        public void SendResponse(Client client,RequestCode requestCode,string data)
+        public void SendResponse(Client client,ActionCode actionCode,string data)
         {
-            client.Send(requestCode, data);
+            client.Send(actionCode, data);
         }
         public void HandleRequest(RequestCode requestCode, ActionCode actionCode, string data, Client client)
         {
