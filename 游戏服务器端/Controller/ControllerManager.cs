@@ -35,8 +35,7 @@ namespace GameServer.Controller
             bool isGet = controllerDict.TryGetValue(requestCode, out controller);
             if (isGet == false)
             {
-                Console.WriteLine(requestCode);
-                Console.WriteLine("无法得到"+requestCode+"多对应的controller，无法处理请求");return;
+                Console.WriteLine("无法得到"+requestCode+"对应的controller，无法处理请求");return;
             }
             string methodName = Enum.GetName(typeof(ActionCode),actionCode);
             MethodInfo mi = controller.GetType().GetMethod(methodName);
