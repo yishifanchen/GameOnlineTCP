@@ -22,6 +22,7 @@ namespace GameServer.Controller
         {
             DefaultController defaultController = new DefaultController();
             controllerDict.Add(defaultController.RequestCode, defaultController);
+            controllerDict.Add(RequestCode.User, new UserController());
         }
         /// <summary>
         /// 处理请求
@@ -34,6 +35,7 @@ namespace GameServer.Controller
             bool isGet = controllerDict.TryGetValue(requestCode, out controller);
             if (isGet == false)
             {
+                Console.WriteLine(requestCode);
                 Console.WriteLine("无法得到"+requestCode+"多对应的controller，无法处理请求");return;
             }
             string methodName = Enum.GetName(typeof(ActionCode),actionCode);
@@ -48,7 +50,7 @@ namespace GameServer.Controller
             {
                 return;
             }
-            server.SendResponse(client,requestCode,o as string);
+            server.SendResponse(client,actionCode,o as string);
         }
     }
 }

@@ -14,13 +14,13 @@ namespace GameServer.Servers
     {
         private IPEndPoint ipEndPoint;
         private Socket serverSocket;
-        private List<Client> clientList = new List<Client>();
+        public List<Client> clientList = new List<Client>();
         private ControllerManager controllerManager;
 
         public Server() { }
         public Server(string ipStr,int port)
         {
-            ControllerManager controllerManager = new ControllerManager(this);
+            controllerManager = new ControllerManager(this);
             SetIpAndPort(ipStr, port);
         }
         public void SetIpAndPort(string ipStr, int port)
@@ -40,6 +40,8 @@ namespace GameServer.Servers
             Client client = new Client(clientSocket,this);
             client.Start();
             clientList.Add(client);
+            Console.WriteLine("有客户端连接，当前客户端数量：{0}",clientList.Count);
+            serverSocket.BeginAccept(AcceptCallBack, null);
         }
         public void RemoveClient(Client client)
         {
@@ -48,10 +50,9 @@ namespace GameServer.Servers
                 clientList.Remove(client);
             }
         }
-        public void SendResponse(Client client,RequestCode requestCode,string data)
+        public void SendResponse(Client client,ActionCode actionCode,string data)
         {
-            //TODO给客户端响应
-            client.Send(requestCode, data);
+            client.Send(actionCode, data);
         }
         public void HandleRequest(RequestCode requestCode, ActionCode actionCode, string data, Client client)
         {

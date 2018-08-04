@@ -16,7 +16,10 @@ namespace GameServer.Servers
         private Server server;
         private Message msg = new Message();
         private MySqlConnection mysqlConn;
-
+        public MySqlConnection MysqlConn
+        {
+            get { return mysqlConn; }
+        }
         public Client() { }
         public Client(Socket clientSocket,Server server)
         {
@@ -26,16 +29,19 @@ namespace GameServer.Servers
         }
         public void Start()
         {
+            if (clientSocket == null || clientSocket.Connected == false) return;
             clientSocket.BeginReceive(msg.Data,msg.StartIndex,msg.RemainSize,SocketFlags.None,ReceiveCallback,null);
         }
         private void ReceiveCallback(IAsyncResult ar)
         {
             try{
+                if (clientSocket == null || clientSocket.Connected == false) return;
                 int count = clientSocket.EndReceive(ar);
                 if (count == 0)
                 {
                     Close();
                 }
+                //Console.WriteLine(count);
                 msg.ReadMessage(count,OnProcessMessage);
                 Start();
             }
@@ -57,10 +63,11 @@ namespace GameServer.Servers
                 clientSocket.Close();
             }
             server.RemoveClient(this);
+            Console.WriteLine("当前客户端数量：{0}", server.clientList.Count);
         }
-        public void Send(RequestCode requestCode, string data)
+        public void Send(ActionCode actionCode, string data)
         {
-            byte[] bytes = Message.PackData(requestCode,data);
+            byte[] bytes = Message.PackData(actionCode,data);
             clientSocket.Send(bytes);
         }
     }
