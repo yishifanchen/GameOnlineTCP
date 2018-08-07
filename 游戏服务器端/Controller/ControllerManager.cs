@@ -23,6 +23,7 @@ namespace GameServer.Controller
             DefaultController defaultController = new DefaultController();
             controllerDict.Add(defaultController.RequestCode, defaultController);
             controllerDict.Add(RequestCode.User, new UserController());
+            controllerDict.Add(RequestCode.Room, new RoomController());
         }
         /// <summary>
         /// 处理请求
@@ -43,7 +44,7 @@ namespace GameServer.Controller
             {
                 Console.WriteLine("【警告】在controller["+controller.GetType()+"]中没有对应的处理方法：【"+methodName+"】");return;
             }
-            object[] parameters = new object[] { data,client };
+            object[] parameters = new object[] { data,client,server };
             object o = mi.Invoke(controller, parameters);
             if(o==null||string.IsNullOrEmpty(o as string))
             {

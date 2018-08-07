@@ -15,6 +15,7 @@ namespace GameServer.Servers
         private IPEndPoint ipEndPoint;
         private Socket serverSocket;
         public List<Client> clientList = new List<Client>();
+        private List<Room> roomList = new List<Room>();
         private ControllerManager controllerManager;
 
         public Server() { }
@@ -57,6 +58,12 @@ namespace GameServer.Servers
         public void HandleRequest(RequestCode requestCode, ActionCode actionCode, string data, Client client)
         {
             controllerManager.HandleRequest(requestCode, actionCode, data, client);
+        }
+        public void CreateRoom(Client client)
+        {
+            Room room = new Room(this);
+            room.AddClient(client);
+            roomList.Add(room);
         }
     }
 }
