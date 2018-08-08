@@ -29,7 +29,7 @@ namespace GameServer.Controller
             else
             {
                 Result res = resultDAO.GetResultByUserId(client.MysqlConn,user.ID);
-
+                client.SetUserData(user,res);
                 return string.Format("{0},{1},{2},{3}",((int)ReturnCode.Success).ToString(),user.ID,res.TotalCount,res.WinCount);
             }
         }

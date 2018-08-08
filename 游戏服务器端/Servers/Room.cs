@@ -23,6 +23,10 @@ namespace GameServer.Servers
         {
             this.server = server;
         }
+        public bool IsWaitingJoin()
+        {
+            return state == RoomState.WaitingJoin;
+        }
         public void AddClient(Client client)
         {
             clientRoom.Add(client);
@@ -30,6 +34,10 @@ namespace GameServer.Servers
             {
                 state = RoomState.WaitingBattle;
             }
+        }
+        public string GetHouseOwnerData()
+        {
+            return clientRoom[0].GetUserData();
         }
     }
 }

@@ -65,5 +65,9 @@ namespace GameServer.Servers
             room.AddClient(client);
             roomList.Add(room);
         }
+        public List<Room> GetRoomList()
+        {
+            return roomList;
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Common;
 using MySql.Data.MySqlClient;
 using GameServer.Tool;
+using GameServer.Model;
 
 namespace GameServer.Servers
 {
@@ -16,6 +17,8 @@ namespace GameServer.Servers
         private Server server;
         private Message msg = new Message();
         private MySqlConnection mysqlConn;
+        private User user;
+        private Result result;
         public MySqlConnection MysqlConn
         {
             get { return mysqlConn; }
@@ -70,6 +73,15 @@ namespace GameServer.Servers
         {
             byte[] bytes = Message.PackData(actionCode,data);
             clientSocket.Send(bytes);
+        }
+        public void SetUserData(User user,Result result)
+        {
+            this.user = user;
+            this.result = result;
+        }
+        public string GetUserData()
+        {
+            return user.ID + "," + user.Username + "," + result.TotalCount + "," + result.WinCount;
         }
     }
 }
