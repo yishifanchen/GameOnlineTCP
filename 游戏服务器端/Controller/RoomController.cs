@@ -27,6 +27,7 @@ namespace GameServer.Controller
                 if (room.IsWaitingJoin())
                 {
                     sb.Append(room.GetHouseOwnerData()+"|");
+                    
                 }
             }
             if (sb.Length == 0)
@@ -37,6 +38,7 @@ namespace GameServer.Controller
             {
                 sb.Remove(sb.Length - 1, 1);
             }
+            Console.WriteLine(sb);
             return sb.ToString();
         }
     }
