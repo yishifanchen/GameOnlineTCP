@@ -53,6 +53,7 @@ namespace GameServer.Servers
         }
         private void OnProcessMessage(RequestCode requestCode, ActionCode actionCode, string data)
         {
+            Console.WriteLine(requestCode.ToString()+actionCode.ToString()+data);
             server.HandleRequest(requestCode, actionCode, data,this);
         }
         private void Close()

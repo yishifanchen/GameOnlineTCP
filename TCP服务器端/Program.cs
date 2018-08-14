@@ -47,7 +47,7 @@ namespace TCP服务器端
             byte[] dataBuffer = new byte[1024];
             int count = clientSocket.Receive(dataBuffer);
             string msgReceive = System.Text.Encoding.UTF8.GetString(dataBuffer, 0, count);
-            Console.WriteLine(msgReceive);
+            //Console.WriteLine(msgReceive);
             Console.ReadKey();
             clientSocket.Close();
             serverSocket.Close();
