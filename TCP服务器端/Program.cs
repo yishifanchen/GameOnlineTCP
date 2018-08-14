@@ -21,9 +21,10 @@ namespace TCP服务器端
             //192.168.0.112    127.0.0.1
             //IpAddress xxx.xxx.xxx.xxx IPEndPoint xxx.xxx.xxx.xxx:port
             IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
-            IPEndPoint ipEndPoint = new IPEndPoint(ipAddress, 88);
+            IPEndPoint ipEndPoint = new IPEndPoint(ipAddress, 6688);
             serverSocket.Bind(ipEndPoint);//绑定ip和端口号
             serverSocket.Listen(0);//开始监听端口号
+            Console.WriteLine("服务器已启动");
             //Socket clientSocket = serverSocket.Accept();//接受一个客户端的连接
             serverSocket.BeginAccept(AcceptCallBack, serverSocket);
 
@@ -57,10 +58,14 @@ namespace TCP服务器端
         {
             Socket serverSocket = ar.AsyncState as Socket;
             Socket clientSocket = serverSocket.EndAccept(ar);
+            Console.WriteLine("有一个客户端连接");
             //向客户端发送一条消息
             string msgStr = "Hello client! 你好...";
-            byte[] data = System.Text.Encoding.UTF8.GetBytes(msgStr);
-            clientSocket.Send(data);
+            for (int i=0;i<1000;i++)
+            {
+                byte[] data = Message.GetBytes(msgStr);
+                clientSocket.Send(data);
+            }
             clientSocket.BeginReceive(msg.Data, msg.StartIndex, msg.RemainSize, SocketFlags.None, ReceiveCallBack, clientSocket);
 
             serverSocket.BeginAccept(AcceptCallBack, serverSocket);

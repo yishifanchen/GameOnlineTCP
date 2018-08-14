@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Common;
 using MySql.Data.MySqlClient;
 using GameServer.Tool;
+using GameServer.Model;
 
 namespace GameServer.Servers
 {
@@ -16,6 +17,9 @@ namespace GameServer.Servers
         private Server server;
         private Message msg = new Message();
         private MySqlConnection mysqlConn;
+        private User user;
+        private Result result;
+        private Room room;
         public MySqlConnection MysqlConn
         {
             get { return mysqlConn; }
@@ -26,6 +30,11 @@ namespace GameServer.Servers
             this.clientSocket = clientSocket;
             this.server = server;
             mysqlConn = ConnHelper.Connect();
+        }
+        public Room Room
+        {
+            get { return room; }
+            set { room = value; }
         }
         public void Start()
         {
@@ -53,7 +62,7 @@ namespace GameServer.Servers
         }
         private void OnProcessMessage(RequestCode requestCode, ActionCode actionCode, string data)
         {
-            Console.WriteLine(requestCode.ToString()+actionCode.ToString()+data);
+            Console.WriteLine("请求类型："+requestCode.ToString()+"方法类型："+actionCode.ToString()+"数据:"+data);
             server.HandleRequest(requestCode, actionCode, data,this);
         }
         private void Close()
@@ -70,6 +79,23 @@ namespace GameServer.Servers
         {
             byte[] bytes = Message.PackData(actionCode,data);
             clientSocket.Send(bytes);
+        }
+        public void SetUserData(User user,Result result)
+        {
+            this.user = user;
+            this.result = result;
+        }
+        public string GetUserData()
+        {
+            return user.ID + "," + user.Username + "," + result.TotalCount + "," + result.WinCount;
+        }
+        public int GetUserId()
+        {
+            return user.ID;
+        }
+        public bool IsHouseOwner()
+        {
+            return room.IsHouseOwner(this);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace GameServer.Controller
         {
             requestCode = RequestCode.User;
         }
-        public string Login(string data,Client client)
+        public string Login(string data,Client client,Server server)
         {
             string[] strs = data.Split(',');
             User user = userDAO.VerifyUser(client.MysqlConn,strs[0],strs[1]);
@@ -29,11 +29,11 @@ namespace GameServer.Controller
             else
             {
                 Result res = resultDAO.GetResultByUserId(client.MysqlConn,user.ID);
-
+                client.SetUserData(user,res);
                 return string.Format("{0},{1},{2},{3}",((int)ReturnCode.Success).ToString(),user.ID,res.TotalCount,res.WinCount);
             }
         }
-        public string Register(string data,Client client)
+        public string Register(string data,Client client, Server server)
         {
             string[] strs = data.Split(',');
             string username = strs[0];string password = strs[1];
