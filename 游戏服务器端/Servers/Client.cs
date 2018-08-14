@@ -83,5 +83,9 @@ namespace GameServer.Servers
         {
             return user.ID + "," + user.Username + "," + result.TotalCount + "," + result.WinCount;
         }
+        public int GetUserId()
+        {
+            return user.ID;
+        }
     }
 }

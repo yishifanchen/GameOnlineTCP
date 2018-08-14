@@ -41,5 +41,22 @@ namespace GameServer.Controller
             Console.WriteLine(sb);
             return sb.ToString();
         }
+        public string JoinRoom(string data, Client client, Server server)
+        {
+            int id = int.Parse(data);
+            Room room = server.GetRoomById(id);
+            if(room == null)
+            {
+                return ((int)ReturnCode.NotFound).ToString();
+            }
+            else if(room.IsWaitingJoin()==false)
+            {
+                return ((int)ReturnCode.Fail).ToString();
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 }

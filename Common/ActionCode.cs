@@ -10,6 +10,7 @@ namespace Common
         Login,
         Register,
         ListRoom,
-        CreateRoom
+        CreateRoom,
+        JoinRoom
     }
 }

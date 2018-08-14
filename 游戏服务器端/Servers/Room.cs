@@ -39,5 +39,13 @@ namespace GameServer.Servers
         {
             return clientRoom[0].GetUserData();
         }
+        public int GetId()
+        {
+            if (clientRoom.Count>=0)
+            {
+                return clientRoom[0].GetUserId();
+            }
+            return -1;
+        }
     }
 }
