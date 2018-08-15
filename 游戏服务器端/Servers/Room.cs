@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GameServer.Servers
@@ -96,6 +97,20 @@ namespace GameServer.Servers
             {
                 state = RoomState.WaitingJoin;
             }
+        }
+        public void StartTimer()
+        {
+            new Thread(RunTimer).Start();
+        }
+        private void RunTimer()
+        {
+            Thread.Sleep(1000);
+            for (int i=3;i>0;i--)
+            {
+                BroadcastMessage(null,ActionCode.ShowTimer,i.ToString());
+                Thread.Sleep(1000);
+            }
+            BroadcastMessage(null, ActionCode.StartPlay, "r");
         }
     }
 }
