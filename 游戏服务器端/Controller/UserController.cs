@@ -30,7 +30,7 @@ namespace GameServer.Controller
             {
                 Result res = resultDAO.GetResultByUserId(client.MysqlConn,user.ID);
                 client.SetUserData(user,res);
-                return string.Format("{0},{1},{2},{3}",((int)ReturnCode.Success).ToString(),user.ID,res.TotalCount,res.WinCount);
+                return string.Format("{0},{1},{2},{3}",((int)ReturnCode.Success).ToString(),user.Username,res.TotalCount,res.WinCount);
             }
         }
         public string Register(string data,Client client, Server server)
