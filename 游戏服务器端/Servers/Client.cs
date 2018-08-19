@@ -8,6 +8,7 @@ using Common;
 using MySql.Data.MySqlClient;
 using GameServer.Tool;
 using GameServer.Model;
+using GameServer.DAO;
 
 namespace GameServer.Servers
 {
@@ -20,6 +21,7 @@ namespace GameServer.Servers
         private User user;
         private Result result;
         private Room room;
+        private ResultDAO resultDAO = new ResultDAO();
         public MySqlConnection MysqlConn
         {
             get { return mysqlConn; }
@@ -30,6 +32,19 @@ namespace GameServer.Servers
             this.clientSocket = clientSocket;
             this.server = server;
             mysqlConn = ConnHelper.Connect();
+        }
+        public int HP { get; set; }
+        public bool TakeDamage(int damage)
+        {
+            HP -= damage;
+            HP = Math.Max(HP, 0);
+            Console.WriteLine("玩家："+user.Username+"剩余血量："+HP);
+            if (HP <= 0) return true;
+            return false;
+        }
+        public bool IsDie()
+        {
+            return HP <= 0;
         }
         public Room Room
         {
@@ -62,7 +77,7 @@ namespace GameServer.Servers
         }
         private void OnProcessMessage(RequestCode requestCode, ActionCode actionCode, string data)
         {
-            Console.WriteLine("请求类型："+requestCode.ToString()+"方法类型："+actionCode.ToString()+"数据:"+data);
+            //Console.WriteLine("请求类型："+requestCode.ToString()+"方法类型："+actionCode.ToString()+"数据:"+data);
             server.HandleRequest(requestCode, actionCode, data,this);
         }
         private void Close()
@@ -71,6 +86,10 @@ namespace GameServer.Servers
             if (clientSocket!=null)
             {
                 clientSocket.Close();
+            }
+            if (room != null)
+            {
+                room.QuitRoom(this);
             }
             server.RemoveClient(this);
             Console.WriteLine("当前客户端数量：{0}", server.clientList.Count);
@@ -96,6 +115,21 @@ namespace GameServer.Servers
         public bool IsHouseOwner()
         {
             return room.IsHouseOwner(this);
+        }
+        public void UpdateResult(bool isVictory)
+        {
+            UpdateResultToDB(isVictory);
+            UpdateResultToClient();
+        }
+        private void UpdateResultToDB(bool isVictory)
+        {
+            result.TotalCount++;
+            if (isVictory) result.WinCount++;
+            resultDAO.UpdateOrAddResult(mysqlConn,result);
+        }
+        private void UpdateResultToClient()
+        {
+            Send(ActionCode.UpdateResult, string.Format("{0},{1}", result.TotalCount, result.WinCount));
         }
     }
 }

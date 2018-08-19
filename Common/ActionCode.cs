@@ -16,6 +16,12 @@ namespace Common
         QuitRoom,
         StartGame,
         ShowTimer,
-        StartPlay
+        StartPlay,
+        Move,
+        Shoot,
+        Attack,
+        GameOver,
+        UpdateResult,
+        QuitBattle
     }
 }

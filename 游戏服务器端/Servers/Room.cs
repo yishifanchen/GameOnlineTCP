@@ -17,6 +17,7 @@ namespace GameServer.Servers
     }
     class Room
     {
+        private const int MAX_HP = 100;
         private List<Client> clientRoom = new List<Client>();
         private RoomState state = RoomState.WaitingJoin;
         private Server server;
@@ -31,6 +32,7 @@ namespace GameServer.Servers
         }
         public void AddClient(Client client)
         {
+            client.HP = MAX_HP;
             clientRoom.Add(client);
             client.Room = this;
             if (clientRoom.Count >= 2)
@@ -77,6 +79,17 @@ namespace GameServer.Servers
         {
             return client == clientRoom[0];
         }
+        public void QuitRoom(Client client)
+        {
+            if (client == clientRoom[0])
+            {
+                Close();
+            }
+            else
+            {
+                clientRoom.Remove(client);
+            }
+        }
         public void Close()
         {
             foreach(Client client in clientRoom)
@@ -111,6 +124,35 @@ namespace GameServer.Servers
                 Thread.Sleep(1000);
             }
             BroadcastMessage(null, ActionCode.StartPlay, "r");
+        }
+        public void TakeDamage(int damage,Client excludeClient)
+        {
+            bool isDie = false;
+            foreach(Client client in clientRoom)
+            {
+                if (client != excludeClient)
+                {
+                    if (client.TakeDamage(damage))
+                    {
+                        isDie = true;
+                    }
+                }
+            }
+            if (isDie == false) return;
+            foreach (Client client in clientRoom)
+            {
+                if (client.IsDie())
+                {
+                    client.UpdateResult(false);
+                    client.Send(ActionCode.GameOver,((int)ReturnCode.Fail).ToString());
+                }
+                else
+                {
+                    client.UpdateResult(true);
+                    client.Send(ActionCode.GameOver, ((int)ReturnCode.Success).ToString());
+                }
+            }
+            Close();
         }
     }
 }

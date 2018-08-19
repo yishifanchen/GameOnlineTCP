@@ -57,7 +57,7 @@ namespace GameServer.Controller
                 room.AddClient(client);
                 string roomData = room.GetRoomData();
                 room.BroadcastMessage(client,ActionCode.UpdateRoom,roomData);
-                return ((int)ReturnCode.Success).ToString() + "-" + roomData;
+                return ((int)ReturnCode.Success).ToString() + "," + ((int)RoleType.Red).ToString() + "-" + roomData;
             }
         }
         public string QuitRoom(string data, Client client, Server server)
